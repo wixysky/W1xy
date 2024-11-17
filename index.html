@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://wixysky.github.io/W1xy/">
+    <meta name="description" content="Моё портфолио: вдохновляйтесь моими работами и заказывайте создание уникальных сайтов.">
+<meta name="keywords" content="портфолио, веб-разработка, HTML, CSS, сайты на заказ">
+<meta name="author" content="Wixysky">
+<meta property="og:title" content="Wixysky Portfolio">
+<meta property="og:description" content="Качественные веб-решения, которые помогут вашему бизнесу выделиться.">
+<meta property="og:image" content="ссылка_на_главное_изображение">
+<meta property="og:url" content="https://ваше-имя.github.io/название-репозитория/">
+<meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wixysky Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background: linear-gradient(135deg, #000000, #01f7ff, #8c00ff, #800080);
+    color: #c8ff00;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes a {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.header {
+    background: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Фиксирует элемент в верхней части экрана */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Высокое значение z-index, чтобы быть поверх всех элементов */
+}
+
+.header-content {
+    background: rgb(0, 0, 0);
+    color: #00ffbf;
+    font-family: Arial, sans-serif;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #00d2ff, #3a7bd5, #2aab76);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    display: flex;
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    padding: 20px;
+    max-width: 91%;
+    margin: 0 auto;
+    margin-top: 60px; /* Добавьте отступ сверху, чтобы контент не перекрывался фиксированным элементом */
+}
+
+/* Новый фон */
+.new-background-image {
+    background-image: url('https://media.licdn.com/dms/image/D4D12AQFw6P2L56fE4A/article-cover_image-shrink_720_1280/0/1657523324986?e=2147483647&v=beta&t=BMJDK_PXmjK9Ti_TZsxsv41mHbvnGUunJxSua7kgkEw');
+    background-size: cover;
+    background-position: center;
+    width: 1078px;
+    height: 720px;
+    margin: 20px auto;
+    position: relative; /* Для правильного работы z-index */
+    z-index: 1; /* Значение ниже, чем у других элементов */
+}
+
+/* Новый обертка для текста */
+.new-text-overlay {
+    position: relative; /* Создает новый контекст наложения */
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Значение больше, чем у фона */
+}
+
+/* Новый верхний текст */
+.new-text-top {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #00f7ff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    z-index: 3; /* Значение больше, чем у других текстовых блоков */
+}
+
+/* Новый нижний текст */
+.new-text-bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #00f7ff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    z-index: 3; /* Значение больше, чем у других текстовых блоков */
+}
+
+.process {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.process-image1 {
+    background-image: url('https://st3.depositphotos.com/24664374/35274/i/450/depositphotos_352749710-stock-photo-html-css-logos-programming-languages.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 1200px; 
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: rgb(0, 255, 234);
+}
+
+.p {
+    background-color: #000000be;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .header {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .new-background-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.process-image2 {
+    background-image: url('https://dif.telkomuniversity.ac.id/wp-content/uploads/2022/12/Screenshot-2022-12-07-154012.png');
+    background-size: cover;
+    background-position: center;
+    height: 415px; /* Восстановлено */
+    width: 743px; /* Восстановлено */
+    padding: 20px;
+    border-radius: 10px;
+    color: aqua;
+    display: flex;
+    align-items: flex-end;
+}
+
+.comment-form {
+    background-color: #428f68;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comment-form button {
+    background-color: #f70000;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5}
+</style>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <span class="text-gradient">
+                <p>WhatsApp: (+996)999 690 042 |</p> 
+                <p>Email: wixysky007@gmail.com</p>
+            </span>
+        </div>
+    </header>
+    <main class="main">
+        <section class="new-about">
+            <div class="new-background-image">
+                <div class="new-text-overlay">
+                    <div class="new-text-top">
+                        <h1>Welcome to my portfolio</h1>
+                        <p>Find inspiration here for creating unique websites. I offer my services for website development taking into account your individual preferences. My goal is to provide quality web solutions that will help your business or project stand out. I view every project as a unique opportunity to showcase my skills and creativity, so I pay special attention to every element of design and functionality.</p>
+                    </div>
+                    <div class="new-text-bottom">
+                        <p>Using modern web development technologies and techniques, I create websites that not only look good, but also have excellent performance and usability. My approach is based on a deep analysis of client needs and careful consideration of all details. We can always discuss any wishes and changes with you at any stage of development so that the result fully meets your expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="process">
+            <h2 class="u">My work process</h2>
+            <div class="process-image1">
+                <div><p class="p">In the process of website development, I use a variety of technologies and tools to create the most effective and beautiful product. My approach includes a deep understanding of your requirements and desires, allowing you to create websites that perfectly match your vision. I use HTML and CSS as well as other modern web technologies to achieve the best results.</p></div>
+            </div>
+            <div class="process-image2">
+                <p class="p">In addition, I actively use various materials and resources to ensure high quality and functionality of the final product. Every project begins with careful planning and discussion with the client, allowing all key aspects and expectations to be defined. I then move on to developing prototypes and designs that will eventually be turned into a full production website. Continuous testing and optimization is also an important part of my process to ensure the site works flawlessly on all devices and platforms.</p>
+            </div>
+        </section>
+        <section class="comment-form">
+            <h2>Leave a comment</h2>
+            <textarea rows="5" placeholder="your comment ..."></textarea>
+            <button type="submit">Send</button>
+        </section>
+        <section class="contact">
+            <p>Contact me via email or WhatsApp for any inquiries.</p>
+        </section>
+        <section class="contact">
+    <h2>Contact me</h2>
+    <p>Email: <a href="mailto:wixysky007@gmail.com">wixysky007@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/996999690042" target="_blank">+996 999 690 042</a></p>
+</section>
+    </main>
+</body>
+</html>
